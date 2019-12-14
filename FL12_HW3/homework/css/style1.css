@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 1920px;
+  background-color: #fff;
+}
+
+.flex, .landing-logo, .section_card_wrap .section_card, .footer-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.landing-logo img {
+  padding-top: 5px;
+}
+.landing-logo p {
+  margin-left: 15px;
+  font-family: "Hind", sans-serif;
+  font-size: 24px;
+  color: #2c2f3c;
+  font-weight: 600;
+}
+.landing-logo p span {
+  margin-top: -5px;
+  display: block;
+  text-align: center;
+  font-size: 10px;
+}
+
+.header {
+  padding: 15px 0;
+  background: url("../img/m-h-day.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  min-height: 720px;
+  border-bottom-right-radius: 750px 292px;
+}
+.header-wrap {
+  width: 1567px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.header-wrap .header_heading {
+  position: relative;
+  margin-top: 72px;
+  line-height: 72px;
+  width: 40%;
+  z-index: 10;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 72px;
+  color: #2c2f3c;
+  font-weight: 900;
+}
+.header-wrap .header_heading::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 303px;
+  height: 50px;
+  background-color: #14a0c7;
+  z-index: -1;
+}
+.header-wrap .header_text {
+  margin-top: 32px;
+  width: 50%;
+  font-family: "Hind", sans-serif;
+  font-size: 16px;
+  color: #2c2f3c;
+  font-weight: normal;
+  line-height: 25px;
+  word-spacing: 1px;
+  white-space: pre-line;
+}
+.header-wrap .header_button {
+  margin-top: 58px;
+  margin-right: 149px;
+  height: 48px;
+  padding: 0 45px;
+  background-color: #699900;
+  border: none;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 17px;
+  color: #fff;
+  font-weight: bold;
+}
+.header-wrap .login {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+  color: #fff;
+  font-weight: normal;
+}
+
+.section {
+  width: 1567px;
+  margin: 0 auto;
+  padding: 0 15px;
+  margin-top: 38px;
+}
+.section_text {
+  position: relative;
+  margin-bottom: 38px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 41px;
+  color: #2c2f3c;
+  font-weight: bold;
+  text-align: center;
+}
+.section_text::after {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  right: 572px;
+  width: 189px;
+  height: 50px;
+  background-color: #14a0c7;
+  z-index: -1;
+}
+.section_card_wrap {
+  max-width: 1116px;
+  margin: 0 auto;
+}
+.section_card_wrap .section_card {
+  padding: 20px;
+  margin-bottom: 25px;
+  background-color: #21232e;
+  border-radius: 5px;
+}
+.section_card_wrap .section_card_img {
+  display: flex;
+  margin-right: 88px;
+  width: 40%;
+  border-radius: 5px;
+}
+.section_card_wrap .section_card_right_container {
+  height: 100%;
+}
+.section_card_wrap .section_card_heading {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 23px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 41px;
+}
+.section_card_wrap .section_card_text {
+  margin-bottom: 10px;
+  width: 470px;
+  font-family: "Hind", sans-serif;
+  font-size: 16px;
+  color: #c0c3ce;
+  font-weight: normal;
+  line-height: 24px;
+  text-align: justify;
+}
+.section_card_wrap .section_card .section_link {
+  display: block;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  color: #c0c3ce;
+  font-weight: normal;
+  text-align: center;
+}
+.section_banner {
+  margin: 0 auto;
+  margin-top: 70px;
+  transform: translateY(50%);
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 0 47px 0;
+  max-width: 1200px;
+  background: linear-gradient(to right, #699900, #2f5dd2);
+  border-radius: 5px;
+}
+.section_banner_heading {
+  position: relative;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 29px;
+  color: #2c2f3c;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.section_banner_heading::before {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: 116px;
+  width: 63px;
+  height: 50px;
+  background-color: #14a0c7;
+  z-index: -1;
+}
+.section_banner_text {
+  font-family: "Hind", sans-serif;
+  font-size: 16px;
+  color: #c0c3ce;
+  font-weight: normal;
+  line-height: 19px;
+}
+.section_banner_button {
+  height: 48px;
+  padding: 0 45px;
+  background-color: #699900;
+  border: none;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 17px;
+  color: #fff;
+  font-weight: bold;
+  align-self: flex-end;
+}
+
+.footer {
+  width: 100%;
+  padding: 140px 0 63px 0;
+  background: #21232e;
+}
+.footer-wrap {
+  width: 1567px;
+  margin: 0 auto;
+  padding: 0 15px;
+  justify-content: space-between;
+}
+.footer-wrap .landing-logo p {
+  color: #c0c3ce;
+}
+.footer_text {
+  position: relative;
+  max-width: 290px;
+  font-family: "Hind", sans-serif;
+  font-size: 14px;
+  color: #c0c3ce;
+  font-weight: normal;
+}
+.footer-cr {
+  font-family: "Hind", sans-serif;
+  font-size: 16px;
+  color: #c0c3ce;
+  font-weight: normal;
+}

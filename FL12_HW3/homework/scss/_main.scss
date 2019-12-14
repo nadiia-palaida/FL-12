@@ -1,0 +1,253 @@
+@mixin container {
+	width: 1567px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+@mixin font($family, $size, $color, $weight){
+	font-family: $family;
+	font-size: $size;
+	color: $color;
+	font-weight: $weight;
+}
+
+@mixin btn {
+	height: 48px;
+	padding: 0 45px;
+	background-color: $btn-bg;
+	border: none;
+	@include font($f-title,  17px,  $btn-text, bold);
+}
+
+@mixin link($font-size, $color) {
+	@include font($f-title, $font-size, $color, normal);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 1920px;
+	background-color: map-get($backgrounds, "body");
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+}
+
+.landing-logo  {
+	@extend .flex;
+
+	img {
+		padding-top: 5px;
+	}
+
+	p {
+		margin-left: 15px;
+		@include font($f-text, 24px, $title-color, 600);
+
+		span {
+			margin-top: -5px;
+			display: block;
+			text-align: center;
+			font-size: 10px;
+		}
+	}
+}
+
+.header {
+	padding: 15px 0;
+	background: map-get($backgrounds, "header") no-repeat 50% 50%;
+	background-size: cover;
+	min-height: 720px;
+	border-bottom-right-radius: 750px 292px;
+
+	&-wrap {
+		@include container;
+
+		.header_heading {
+			position: relative;
+			margin-top: 72px;
+			line-height: 72px;
+			width: 40%;
+			z-index: 10;
+			@include font($f-title, 72px, $title-color, 900);
+
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 303px;
+				height: 50px;
+				background-color: map-get($backgrounds, "text");
+				z-index: -1;
+			}
+		}
+
+		.header_text {
+			margin-top: 32px;
+			width: 50%;
+			@include font($f-text, 16px, $title-color, normal);
+			line-height: 25px;
+			word-spacing: 1px;
+			white-space: pre-line;
+
+		}
+
+		.header_button {
+			margin-top: 58px;
+			margin-right: 149px;
+			@include btn;
+		}
+
+		.login {
+			@include link(20px, $btn-text);
+		}
+	}
+
+
+}
+
+.section {
+	@include container;
+	margin-top: 38px;
+	
+	&_text {
+		position: relative;
+		margin-bottom: 38px;
+		@include font($f-title, 41px, $title-color, bold);
+		text-align: center;
+		
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 7px;
+			right: 572px;
+			width: 189px;
+			height: 50px;
+			background-color: map-get($backgrounds, "text");
+			z-index: -1;
+		}
+	}
+
+	&_card_wrap {
+		max-width: 1116px;
+		margin: 0 auto;
+
+		.section_card {
+			padding: 20px;
+			margin-bottom: 25px;
+			@extend .flex;
+			background-color: map-get($backgrounds, "section");
+			border-radius: 5px;
+
+			&_img {
+				display: flex;
+				margin-right: 88px;
+				width: 40%;
+				border-radius: 5px;
+
+			}
+
+			&_right_container {
+				
+				height: 100%;
+			}
+
+			&_heading {
+				@include font($f-title, 23px, $btn-text, bold);
+				text-align: center;
+				margin-bottom: 41px;
+			}
+
+			&_text {
+				margin-bottom: 10px;
+				width: 470px;
+				@include font($f-text, 16px, $section-text, normal);
+				line-height: 24px;
+				text-align: justify;
+			}
+
+			.section_link {
+				display: block;
+				@include link(16px, $section-text);
+				text-align: center;
+			}
+		}
+	}
+
+	&_banner {
+		margin: 0 auto;
+		margin-top: 70px;
+		transform: translateY(50%);
+		display: flex;
+		justify-content: space-around;
+		padding: 30px 0 47px 0;
+		max-width: 1200px;
+		background: linear-gradient(to right, $btn-bg, $gradient-end);
+		border-radius: 5px;
+
+		&_heading {
+			position: relative;
+			@include font($f-title, 29px,  $title-color, bold);
+			margin-bottom: 10px;
+
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 5px;
+				left: 116px;
+				width: 63px;
+				height: 50px;
+				background-color: map-get($backgrounds, "text");
+				z-index: -1;
+			}
+		}
+
+		&_text {
+			@include font($f-text, 16px,  $section-text, normal);
+			line-height: 19px;
+		}
+
+		&_button {
+			@include btn;
+			align-self: flex-end;
+		}
+	}
+}
+
+.footer {
+	width: 100%;
+	padding: 140px 0 63px 0;
+	background: map-get($backgrounds, "section");
+
+	&-wrap {
+		@include container;
+		@extend .flex;
+		justify-content: space-between;
+
+		.landing-logo {
+
+			p {
+				color: $section-text;
+			}
+		}
+	}
+
+	&_text {
+		position: relative;
+		max-width: 290px;
+		@include font($f-text, 14px,  $section-text, normal);
+	}
+
+	&-cr {
+		@include font($f-text, 16px,  $section-text, normal);
+	}
+}
+
