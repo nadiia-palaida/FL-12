@@ -166,14 +166,19 @@ body {
 }
 .section_banner {
   margin: 0 auto;
+  height: 144px;
   margin-top: 70px;
   transform: translateY(50%);
   display: flex;
   justify-content: space-around;
-  padding: 30px 0 47px 0;
+  align-items: center;
   max-width: 1200px;
   background: linear-gradient(to right, #e3ac00, #963150);
   border-radius: 5px;
+}
+.section_banner_text_wrap {
+  margin-top: 25px;
+  align-self: flex-start;
 }
 .section_banner_heading {
   position: relative;
@@ -181,14 +186,15 @@ body {
   font-size: 29px;
   color: #fff;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 21px;
+  letter-spacing: 0.6px;
 }
 .section_banner_heading::before {
   content: '';
   position: absolute;
-  bottom: 5px;
-  left: 116px;
-  width: 63px;
+  bottom: -1px;
+  left: 122px;
+  width: 64px;
   height: 50px;
   background-color: #ff4e33;
   z-index: -1;
@@ -209,12 +215,11 @@ body {
   font-size: 17px;
   color: #fff;
   font-weight: bold;
-  align-self: flex-end;
 }
 
 .footer {
   width: 100%;
-  padding: 140px 0 63px 0;
+  padding: 122px 0 52px 0;
   background: #3b3f50;
 }
 .footer-wrap {

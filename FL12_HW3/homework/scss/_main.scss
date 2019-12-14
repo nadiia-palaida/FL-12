@@ -184,26 +184,33 @@ body {
 
 	&_banner {
 		margin: 0 auto;
+		height: 144px;
 		margin-top: 70px;
 		transform: translateY(50%);
 		display: flex;
 		justify-content: space-around;
-		padding: 30px 0 47px 0;
+		align-items: center;
 		max-width: 1200px;
 		background: linear-gradient(to right, $btn-bg, $gradient-end);
 		border-radius: 5px;
 
+		&_text_wrap {
+			margin-top: 25px;
+			align-self: flex-start;
+		}
+
 		&_heading {
 			position: relative;
 			@include font($f-title, 29px,  $title-color, bold);
-			margin-bottom: 10px;
+			margin-bottom: 21px;
+			letter-spacing: 0.6px;
 
 			&::before {
 				content: '';
 				position: absolute;
-				bottom: 5px;
-				left: 116px;
-				width: 63px;
+				bottom: -1px;
+				left: 122px;
+				width: 64px;
 				height: 50px;
 				background-color: map-get($backgrounds, "text");
 				z-index: -1;
@@ -217,14 +224,13 @@ body {
 
 		&_button {
 			@include btn;
-			align-self: flex-end;
 		}
 	}
 }
 
 .footer {
 	width: 100%;
-	padding: 140px 0 63px 0;
+	padding: 122px 0 52px 0;
 	background: map-get($backgrounds, "section");
 
 	&-wrap {
