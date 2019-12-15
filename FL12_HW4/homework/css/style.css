@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  word-wrap: break-word;
+  box-sizing: border-box; }
+
+body {
+  overflow-x: hidden; }
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 15px; }
+
+.container-content {
+  max-width: 978px;
+  margin: 0 auto;
+  padding: 0 15px; }
+
+.top-menu {
+  position: fixed;
+  height: 86px;
+  margin-bottom: 86px;
+  width: 100%;
+  background-color: #fff; }
+  .top-menu .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .top-menu-logo {
+    font-size: 21px;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 3px; }
+  .top-menu-nav .menu {
+    display: flex; }
+    .top-menu-nav .menu-item {
+      margin-right: 47px;
+      font-size: 18px;
+      color: #777;
+      letter-spacing: 0.7px; }
+      .top-menu-nav .menu-item a {
+        font-size: 18px;
+        color: #777;
+        letter-spacing: 0.7px; }
+        .top-menu-nav .menu-item a:hover {
+          color: #bfba55; }
+      .top-menu-nav .menu-item:last-child {
+        margin-right: 0; }
+      .top-menu-nav .menu-item:hover {
+        color: #bfba55; }
+
+.head {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 86px;
+  background: url("../img/home-bg.jpg") center no-repeat;
+  background-size: cover; }
+  .head-wrap {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); }
+  .head-main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; }
+    .head-main-title {
+      margin-bottom: 20px;
+      font-size: 70px;
+      color: #fff;
+      letter-spacing: 0.6px; }
+    .head-main-text {
+      font-size: 15px;
+      color: #bfba55;
+      font-weight: 200;
+      letter-spacing: 1.5px;
+      margin-bottom: 50px; }
+    .head-main-btn {
+      text-align: center;
+      display: inline-flex;
+      align-items: center;
+      height: 48px;
+      padding: 0 25px;
+      font-size: 13px;
+      color: #000;
+      background-color: #fff;
+      border-radius: 25px;
+      text-transform: capitalize;
+      text-transform: uppercase;
+      letter-spacing: 1px; }
+
+.blog {
+  padding-top: 114px; }
+  .blog .article {
+    padding-bottom: 60px;
+    margin-bottom: 88px;
+    border-bottom: 1px solid #777; }
+    .blog .article:last-child {
+      margin-bottom: 0;
+      border-bottom: 0; }
+    .blog .article-img {
+      margin-bottom: 32px; }
+      .blog .article-img img {
+        width: 100%;
+        object-fit: cover; }
+    .blog .article-title {
+      margin-bottom: 15px;
+      font-size: 30px;
+      letter-spacing: 0.3px; }
+    .blog .article-pub {
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      color: #000; }
+      .blog .article-pub .author {
+        display: flex;
+        align-items: center;
+        margin-right: 20px; }
+        .blog .article-pub .author-img {
+          margin-right: 10px;
+          border-radius: 50%;
+          width: 42px;
+          height: 42px; }
+        .blog .article-pub .author .name {
+          text-transform: capitalize; }
+      .blog .article-pub .date {
+        margin-right: 18px; }
+    .blog .article-text {
+      margin-bottom: 41px;
+      font-size: 18px;
+      color: #777;
+      line-height: 24px; }
+    .blog .article-btn {
+      text-align: center;
+      display: inline-flex;
+      align-items: center;
+      height: 48px;
+      padding: 0 25px;
+      font-size: 13px;
+      color: #000;
+      background-color: #fff;
+      border-radius: 25px;
+      text-transform: capitalize;
+      border: 1px solid #777;
+      font-size: 19px;
+      color: #777; }
+
+.footer {
+  padding-top: 100px;
+  padding-bottom: 90px;
+  background-color: #000; }
+  .footer-title {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 15px; }
+  .footer-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    color: #777;
+    line-height: 26px; }
+    .footer-info .about {
+      margin-right: 75px;
+      width: 55%; }
+      .footer-info .about-text {
+        margin-bottom: 24px; }
+    .footer-info .contacts {
+      margin-left: 75px;
+      width: 45%; }
+      .footer-info .contacts-address {
+        margin-bottom: 12px;
+        font-style: normal; }
+      .footer-info .contacts-tel {
+        margin-bottom: 10px;
+        display: block;
+        color: #777; }
+      .footer-info .contacts-email {
+        display: block;
+        color: #777; }
+
