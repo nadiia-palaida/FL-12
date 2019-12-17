@@ -35,6 +35,8 @@ body {
     color: #777;
     text-transform: uppercase;
     letter-spacing: 3px; }
+    .top-menu-logo a {
+      color: #777; }
   .top-menu-nav .menu {
     display: flex; }
     .top-menu-nav .menu-item {
@@ -94,13 +96,15 @@ body {
       letter-spacing: 1px; }
 
 .blog {
-  padding-top: 114px; }
+  padding-top: 114px;
+  padding-bottom: 111px; }
   .blog .article {
     padding-bottom: 60px;
     margin-bottom: 88px;
     border-bottom: 1px solid #777; }
     .blog .article:last-child {
       margin-bottom: 0;
+      padding-bottom: 0;
       border-bottom: 0; }
     .blog .article-img {
       margin-bottom: 32px; }
