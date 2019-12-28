@@ -19,7 +19,7 @@ if (inpEmail === '' || inpEmail === null) {
             if (inpEmail === 'user@gmail.com' && inpPass === 'UserPass' ||
                 inpEmail === 'admin@gmail.com' && inpPass === 'AdminPass') {
                     changePass = confirm('Do you want to change your password?');
-                    if (changePass === false) {
+                    if (!changePass) {
                         alert('You have failed the change.');
                     } else {
                         oldPass = prompt('Write old password, please', '');
