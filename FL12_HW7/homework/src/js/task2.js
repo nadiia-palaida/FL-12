@@ -19,7 +19,6 @@ const attemptsLength = 3,
 
 continueG: while(continueGame || newGame) {
    randomNumber = Math.floor(Math.random() * (maxNumber - minNumber) + minNumber);
-   console.log(randomNumber);
    for (let i = 0; i < attemptsLength; i++) {
        switch (i) {
            case 0:
@@ -40,9 +39,6 @@ continueG: while(continueGame || newGame) {
             \n Possible prise on current attempt: ${userPrize}$`
 
            ,''));
-       if (userNumber === '' || isNaN(userNumber) || userNumber === null) {
-           break;
-       }
 
        if (userNumber === randomNumber) {
            wonPrize += userPrize;
@@ -54,16 +50,18 @@ continueG: while(continueGame || newGame) {
                continue continueG;
            } else {
                alert(`Thank you for your participation. Your prize is: ${wonPrize} $`);
+               continueGame = false;
+               newGame = false;
                break;
            }
        } else if (i === lastAttempt) {
            alert(`Thank you for your participation. Your prize is: ${wonPrize} $`);
-       }
-   }
+           newGame = confirm('Do you want to play again?');
 
-    newGame = confirm('Do you want to play again?');
-    if(!newGame) {
-       break;
+           if (!newGame) {
+               break;
+           }
+       }
    }
 }
 
