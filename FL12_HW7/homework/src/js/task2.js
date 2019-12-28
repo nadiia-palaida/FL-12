@@ -11,11 +11,16 @@ let minNumber = 0,
     wonPrize = 0,
     continueNum = 1;
 
+const attemptsLength = 3,
+    largerMax = 4,
+    largerConttinueNum = 2,
+    lastAttempt = 2;
+
 
 continueG: while(continueGame || newGame) {
    randomNumber = Math.floor(Math.random() * (maxNumber - minNumber) + minNumber);
    console.log(randomNumber);
-   for (let i = 0; i < 3; i++) {
+   for (let i = 0; i < attemptsLength; i++) {
        switch (i) {
            case 0:
                userPrize = userPrize3 * continueNum;
@@ -23,14 +28,14 @@ continueG: while(continueGame || newGame) {
            case 1:
                userPrize = userPrize2 * continueNum;
                break;
-           case 2:
+           case lastAttempt:
                userPrize = userPrize1 * continueNum;
                break;
            default:
                userPrize = 0;
        }
        userNumber = parseInt(prompt(`Choose a roulette pocket number from 0 to ${maxNumber} ` +
-           `\n Attempts left: ${3 - i}
+           `\n Attempts left: ${attemptsLength - i}
             \n Total prize: ${wonPrize}$
             \n Possible prise on current attempt: ${userPrize}$`
 
@@ -43,16 +48,15 @@ continueG: while(continueGame || newGame) {
            wonPrize += userPrize;
            alert(`Congratulation, you won!   Your prize is: ${wonPrize} $. `)
            continueGame = confirm('Do you want to continue?');
-           console.log('continue' + continueGame);
            if(continueGame) {
-               continueNum *= 2;
-               maxNumber += 4;
+               continueNum *= largerConttinueNum;
+               maxNumber += largerMax;
                continue continueG;
            } else {
                alert(`Thank you for your participation. Your prize is: ${wonPrize} $`);
                break;
            }
-       } else if (i === 2) {
+       } else if (i === lastAttempt) {
            alert(`Thank you for your participation. Your prize is: ${wonPrize} $`);
        }
    }
